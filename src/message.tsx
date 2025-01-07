@@ -1,5 +1,5 @@
 function Message() {
-    const name  = "Benjamin";
+    const name  = "Benjamin ";
     if (name)
         return <h1>Hello {name}</h1>;
     return <h1>Hello World</h1>;
