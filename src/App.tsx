@@ -1,7 +1,25 @@
-import Message from "./message"
+import ListGroup from "./components/ListGroup";
 
-function App(){
-  return <div><Message></Message></div>;
+function App() {
+  let items = ["New York", "San Francisco", "London", "Tokyo", "Paris"];
+
+  return (
+    <>
+      <h1>List</h1>
+      {items.length === 0 && <p>No item found</p>}
+      <ul className="list-group">
+        {items.map((item, index) => (
+          <li
+            className="list-group-item"
+            key={item}
+            onClick={(event) => console.log(event)}
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
+    </>
+  );
 }
 
 export default App;
